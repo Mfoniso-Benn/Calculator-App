@@ -1,0 +1,61 @@
+resultDisp = document.getElementById("result-disp")
+let displaycalc = resultDisp.innerHTML 
+let hasDecimal = false; // A flag to track if a period is already added
+btn7 = document.getElementById("7-btn")
+
+let count = 0
+
+// resultDisp = "0" 
+
+const clickButton = (id) => {
+
+    if (resultDisp.innerHTML.length > 17) {
+        return
+    }
+    if(resultDisp.innerHTML == "0"){
+        displaycalc = Number(id)
+        return resultDisp.innerHTML = displaycalc
+    }
+
+    // If the period button is clicked
+    if (id === '.') {
+        // Only allow the period to be added once in the current number
+        if (!hasDecimal) {
+            resultDisp.innerHTML += id;
+            hasDecimal = true; // Set the flag to true once period is added
+        }
+    } else {
+        // If the display is "0", replace it with the clicked number
+        if (resultDisp.innerHTML === "0") {
+            resultDisp.innerHTML = id;
+        } else {
+            resultDisp.innerHTML += id; // Append the clicked number
+        }
+    }
+
+    displaycalc += `${id}`
+    resultDisp.innerHTML = displaycalc
+    console.log(resultDisp)
+    console.log(typeof count)
+}
+
+
+
+const calculations = (sign) => {
+    
+}
+const per = () => {
+
+}
+const del = () => {
+    let currentDisplay = resultDisp.innerHTML;
+    if (currentDisplay.length > 1) {
+        if (currentDisplay.endsWith('.')) {
+            hasDecimal = false; // Reset the flag if the period is deleted
+        }
+        resultDisp.innerHTML = currentDisplay.slice(0, -1); // Remove the last character
+    } else {
+        resultDisp.innerHTML = "0"; // Reset to 0 if the last character is deleted
+        hasDecimal = false;
+    }
+};

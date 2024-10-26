@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="display">
+        <p id="result-disp">0</p>
+      </div>
+      <div class="main-buttons-div">
+        <div class="buttons">
+          <button id="7-btn" onclick="clickButton(7)">7</button>
+          <button id="8-btn" onclick="clickButton(8)">8</button>
+          <button id="9-btn" onclick="clickButton(9)">9</button>
+          <button id="divide-btn" onclick="calculations('div')">/</button>
+          <button id="4-btn" onclick="clickButton(4)">4</button>
+          <button id="5-btn" onclick="clickButton(5)">5</button>
+          <button id="6-btn" onclick="clickButton(6)">6</button>
+          <button id="multiply-btn" onclick="calculations('mul')">X</button>
+          <button id="1-btn" onclick="clickButton(1)">1</button>
+          <button id="2-btn" onclick="clickButton(2)">2</button>
+          <button id="3-btn" onclick="clickButton(3)">3</button>
+          <button id="subtract-btn" onclick="calculations('sub')">-</button>
+          <button id="del-btn" onclick="del()">Del</button>
+          <button id="0-btn" onclick="clickButton(0)">0</button>
+          <button id="period-btn" onclick="clickButton('.')">.</button>
+          <button id="add-btn" onclick="calculations('add')">+</button>
+          <button id="equate-btn" onclick="equate()">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
